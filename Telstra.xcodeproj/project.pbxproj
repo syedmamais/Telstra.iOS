@@ -16,6 +16,18 @@
 		800021E5246946FD009EFBB5 /* TelstraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800021E4246946FD009EFBB5 /* TelstraTests.swift */; };
 		800021F0246946FD009EFBB5 /* TelstraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800021EF246946FD009EFBB5 /* TelstraUITests.swift */; };
 		80002201246A468F009EFBB5 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80002200246A468F009EFBB5 /* Country.swift */; };
+		80002215246A49B2009EFBB5 /* CountryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80002205246A49B2009EFBB5 /* CountryAPI.swift */; };
+		80002216246A49B2009EFBB5 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80002206246A49B2009EFBB5 /* EndPointType.swift */; };
+		80002217246A49B2009EFBB5 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80002208246A49B2009EFBB5 /* NetworkRouter.swift */; };
+		80002218246A49B2009EFBB5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80002209246A49B2009EFBB5 /* Router.swift */; };
+		80002219246A49B2009EFBB5 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000220B246A49B2009EFBB5 /* HTTPTask.swift */; };
+		8000221A246A49B2009EFBB5 /* HTTPParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000220C246A49B2009EFBB5 /* HTTPParameterEncoder.swift */; };
+		8000221B246A49B2009EFBB5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000220D246A49B2009EFBB5 /* HTTPMethod.swift */; };
+		8000221C246A49B3009EFBB5 /* HTTPURLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000220E246A49B2009EFBB5 /* HTTPURLParameterEncoder.swift */; };
+		8000221D246A49B3009EFBB5 /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80002210246A49B2009EFBB5 /* NetworkHandler.swift */; };
+		8000221E246A49B3009EFBB5 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80002212246A49B2009EFBB5 /* NetworkReachability.swift */; };
+		8000221F246A49B3009EFBB5 /* CountryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80002214246A49B2009EFBB5 /* CountryService.swift */; };
+		80002221246A53E2009EFBB5 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80002220246A53E2009EFBB5 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +63,18 @@
 		800021EF246946FD009EFBB5 /* TelstraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelstraUITests.swift; sourceTree = "<group>"; };
 		800021F1246946FD009EFBB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80002200246A468F009EFBB5 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		80002205246A49B2009EFBB5 /* CountryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryAPI.swift; sourceTree = "<group>"; };
+		80002206246A49B2009EFBB5 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		80002208246A49B2009EFBB5 /* NetworkRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		80002209246A49B2009EFBB5 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		8000220B246A49B2009EFBB5 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		8000220C246A49B2009EFBB5 /* HTTPParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPParameterEncoder.swift; sourceTree = "<group>"; };
+		8000220D246A49B2009EFBB5 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		8000220E246A49B2009EFBB5 /* HTTPURLParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPURLParameterEncoder.swift; sourceTree = "<group>"; };
+		80002210246A49B2009EFBB5 /* NetworkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
+		80002212246A49B2009EFBB5 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		80002214246A49B2009EFBB5 /* CountryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryService.swift; sourceTree = "<group>"; };
+		80002220246A53E2009EFBB5 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +132,8 @@
 				800021D6246946FC009EFBB5 /* Assets.xcassets */,
 				800021D8246946FC009EFBB5 /* LaunchScreen.storyboard */,
 				800021DB246946FC009EFBB5 /* Info.plist */,
+				80002222246A53EE009EFBB5 /* Common */,
+				80002203246A49B2009EFBB5 /* Networking */,
 				80002202246A4694009EFBB5 /* Model */,
 			);
 			path = Telstra;
@@ -137,6 +163,80 @@
 				80002200246A468F009EFBB5 /* Country.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		80002203246A49B2009EFBB5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				80002204246A49B2009EFBB5 /* EndPoints */,
+				80002207246A49B2009EFBB5 /* NetworkRouting */,
+				8000220A246A49B2009EFBB5 /* HTTPHandlers */,
+				8000220F246A49B2009EFBB5 /* NetworkHandler */,
+				80002211246A49B2009EFBB5 /* Reachability */,
+				80002213246A49B2009EFBB5 /* Services */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		80002204246A49B2009EFBB5 /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				80002205246A49B2009EFBB5 /* CountryAPI.swift */,
+				80002206246A49B2009EFBB5 /* EndPointType.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		80002207246A49B2009EFBB5 /* NetworkRouting */ = {
+			isa = PBXGroup;
+			children = (
+				80002208246A49B2009EFBB5 /* NetworkRouter.swift */,
+				80002209246A49B2009EFBB5 /* Router.swift */,
+			);
+			path = NetworkRouting;
+			sourceTree = "<group>";
+		};
+		8000220A246A49B2009EFBB5 /* HTTPHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				8000220B246A49B2009EFBB5 /* HTTPTask.swift */,
+				8000220C246A49B2009EFBB5 /* HTTPParameterEncoder.swift */,
+				8000220D246A49B2009EFBB5 /* HTTPMethod.swift */,
+				8000220E246A49B2009EFBB5 /* HTTPURLParameterEncoder.swift */,
+			);
+			path = HTTPHandlers;
+			sourceTree = "<group>";
+		};
+		8000220F246A49B2009EFBB5 /* NetworkHandler */ = {
+			isa = PBXGroup;
+			children = (
+				80002210246A49B2009EFBB5 /* NetworkHandler.swift */,
+			);
+			path = NetworkHandler;
+			sourceTree = "<group>";
+		};
+		80002211246A49B2009EFBB5 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				80002212246A49B2009EFBB5 /* NetworkReachability.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		80002213246A49B2009EFBB5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				80002214246A49B2009EFBB5 /* CountryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		80002222246A53EE009EFBB5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				80002220246A53E2009EFBB5 /* AppConstants.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,10 +370,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8000221C246A49B3009EFBB5 /* HTTPURLParameterEncoder.swift in Sources */,
+				80002218246A49B2009EFBB5 /* Router.swift in Sources */,
 				80002201246A468F009EFBB5 /* Country.swift in Sources */,
+				8000221A246A49B2009EFBB5 /* HTTPParameterEncoder.swift in Sources */,
+				8000221B246A49B2009EFBB5 /* HTTPMethod.swift in Sources */,
 				800021D2246946F7009EFBB5 /* ViewController.swift in Sources */,
+				80002219246A49B2009EFBB5 /* HTTPTask.swift in Sources */,
+				80002216246A49B2009EFBB5 /* EndPointType.swift in Sources */,
+				8000221D246A49B3009EFBB5 /* NetworkHandler.swift in Sources */,
+				8000221F246A49B3009EFBB5 /* CountryService.swift in Sources */,
+				8000221E246A49B3009EFBB5 /* NetworkReachability.swift in Sources */,
+				80002221246A53E2009EFBB5 /* AppConstants.swift in Sources */,
 				800021CE246946F7009EFBB5 /* AppDelegate.swift in Sources */,
+				80002215246A49B2009EFBB5 /* CountryAPI.swift in Sources */,
 				800021D0246946F7009EFBB5 /* SceneDelegate.swift in Sources */,
+				80002217246A49B2009EFBB5 /* NetworkRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
