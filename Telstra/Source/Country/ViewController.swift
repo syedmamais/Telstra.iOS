@@ -12,11 +12,9 @@ class ViewController: UIViewController {
     
     private lazy var countryTable: UITableView = {
         let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(FactCell.self, forCellReuseIdentifier: CellIdentifiers.factCellIdentifier)
         tableView.estimatedRowHeight = 70
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.allowsSelection = false
         tableView.dataSource = self
         tableView.delegate = self
         return tableView
@@ -38,6 +36,7 @@ class ViewController: UIViewController {
     
     func setupUI() {
         view.addSubview(countryTable)
+        countryTable.translatesAutoresizingMaskIntoConstraints = false
         countryTable.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         countryTable.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         countryTable.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -49,6 +48,7 @@ class ViewController: UIViewController {
         countryVM.dataFetched = { [weak self] in
             DispatchQueue.main.async { [weak self] in
                 self?.countryTable.reloadData()
+                self?.title = self?.countryVM.countryTitle
             }
         }
     }
@@ -82,10 +82,6 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             return countryVM.countryFactsCount()
         }
         return 0
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

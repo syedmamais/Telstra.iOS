@@ -10,62 +10,53 @@ import UIKit
 
 class FactCell: UITableViewCell {
     
-    let factTitle           = UILabel()
-    let factImage           = UIImageView()
-    let factDescription     = UILabel()
+    let factTitle            = UILabel()
+    let factImage            = UIImageView()
+    let factDescription      = UILabel()
     
-    var networkHandler      = NetworkHandler()
-    var viewModel           : FactViewModel?
+    var networkHandler       = NetworkHandler()
+    var viewModel            : FactViewModel?
     
-    let containerView       : UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.clipsToBounds = true
-        return view
-    }()
+    var contrainerViewHeight : NSLayoutConstraint!
     
     // MARK: Initalizers
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         contentView.addSubview(factImage)
-        containerView.addSubview(factTitle)
-        containerView.addSubview(factDescription)
-        self.contentView.addSubview(containerView)
+        contentView.addSubview(factTitle)
+        contentView.addSubview(factDescription)
         
+        let marginGuide = contentView.layoutMarginsGuide
+
         // configure fact image
         factImage.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
         factImage.clipsToBounds = true
-        factImage.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor).isActive = true
-        factImage.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor, constant:10).isActive = true
+        factImage.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
+        factImage.leadingAnchor.constraint(equalTo: marginGuide.leadingAnchor, constant:10).isActive = true
         factImage.widthAnchor.constraint(equalToConstant:60).isActive = true
         factImage.heightAnchor.constraint(equalToConstant:60).isActive = true
         
-        
-        // configure container view
-        containerView.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor).isActive = true
-        containerView.leadingAnchor.constraint(equalTo:self.factImage.trailingAnchor, constant:10).isActive = true
-        containerView.trailingAnchor.constraint(equalTo:self.contentView.trailingAnchor, constant:-10).isActive = true
-        containerView.heightAnchor.constraint(equalToConstant:40).isActive = true
-        
-        
         // configure fact title
         factTitle.translatesAutoresizingMaskIntoConstraints = false
-        factTitle.topAnchor.constraint(equalTo:self.containerView.topAnchor).isActive = true
-        factTitle.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
-        factTitle.trailingAnchor.constraint(equalTo:self.containerView.trailingAnchor).isActive = true
+        factTitle.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
+        factTitle.leadingAnchor.constraint(equalTo: self.factImage.trailingAnchor, constant:10).isActive = true
+        factTitle.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
         factTitle.numberOfLines = 0
         factTitle.font = UIFont.systemFont(ofSize: 16)
         
         // configure fact description
         factDescription.translatesAutoresizingMaskIntoConstraints = false
-        factDescription.lineBreakMode = .byWordWrapping
         factDescription.topAnchor.constraint(equalTo:self.factTitle.bottomAnchor).isActive = true
-        factDescription.leadingAnchor.constraint(equalTo:self.containerView.leadingAnchor).isActive = true
-        factDescription.topAnchor.constraint(equalTo:self.factTitle.bottomAnchor).isActive = true
+        factDescription.leadingAnchor.constraint(equalTo:self.factImage.trailingAnchor, constant:10).isActive = true
+        factDescription.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
         factDescription.numberOfLines = 0
-        factDescription.font = UIFont.systemFont(ofSize: 12)
+        factDescription.font = UIFont.systemFont(ofSize: 14)
         factDescription.textColor = UIColor.lightGray
+        
+        contentView.heightAnchor.constraint(greaterThanOrEqualToConstant: 80).isActive = true
+        contentView.bottomAnchor.constraint(equalTo: factDescription.bottomAnchor).isActive = true
+
     }
     
     required init?(coder aDecoder: NSCoder) {

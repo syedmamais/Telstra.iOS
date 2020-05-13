@@ -40,12 +40,12 @@ extension FactViewModel {
     
     /// Returns fact description or an empty string if *description* is nil
     func factDescription() -> String {
-        return factModel.description ?? ""
+        return factModel.description ?? "N/A"
     }
     
     /// Returns fact title name or an empty string if *title* is nil
     func factTitle() -> String {
-        return factModel.title ?? ""
+        return factModel.title ?? "N/A"
     }
 }
 

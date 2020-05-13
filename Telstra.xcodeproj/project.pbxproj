@@ -143,7 +143,6 @@
 				800021D6246946FC009EFBB5 /* Assets.xcassets */,
 				800021D8246946FC009EFBB5 /* LaunchScreen.storyboard */,
 				800021DB246946FC009EFBB5 /* Info.plist */,
-				80002229246A9E90009EFBB5 /* Custom View */,
 			);
 			path = Telstra;
 			sourceTree = "<group>";
@@ -253,7 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				80002226246A6004009EFBB5 /* Country */,
-				80002230246AEFCC009EFBB5 /* FactViewModel.swift */,
+				80002234246BBA92009EFBB5 /* Fact Cell */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -267,28 +266,21 @@
 			path = Country;
 			sourceTree = "<group>";
 		};
-		80002229246A9E90009EFBB5 /* Custom View */ = {
-			isa = PBXGroup;
-			children = (
-				8000222A246A9E9B009EFBB5 /* TableView Cell */,
-			);
-			path = "Custom View";
-			sourceTree = "<group>";
-		};
-		8000222A246A9E9B009EFBB5 /* TableView Cell */ = {
-			isa = PBXGroup;
-			children = (
-				80002227246A9E85009EFBB5 /* FactCell.swift */,
-			);
-			path = "TableView Cell";
-			sourceTree = "<group>";
-		};
 		8000222D246AC948009EFBB5 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				8000222B246AC923009EFBB5 /* AlertService.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		80002234246BBA92009EFBB5 /* Fact Cell */ = {
+			isa = PBXGroup;
+			children = (
+				80002230246AEFCC009EFBB5 /* FactViewModel.swift */,
+				80002227246A9E85009EFBB5 /* FactCell.swift */,
+			);
+			path = "Fact Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
