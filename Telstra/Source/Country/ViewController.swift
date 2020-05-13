@@ -20,6 +20,11 @@ class ViewController: UIViewController {
         return tableView
     }()
     
+    // init refresh control
+    var refreshControl: UIRefreshControl = {
+        return UIRefreshControl()
+    }()
+    
     /// Setup ViewModel for Country Data
     lazy var countryVM : CountryViewModel = {
         let countryVM = CountryViewModel()
@@ -32,6 +37,7 @@ class ViewController: UIViewController {
         initViewModel()
         bindViewModel()
         setupUI()
+        setupPullToRefresh()
     }
     
     func setupUI() {
@@ -49,6 +55,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.async { [weak self] in
                 self?.countryTable.reloadData()
                 self?.title = self?.countryVM.countryTitle
+                self?.refreshControl.endRefreshing()
             }
         }
     }
@@ -98,3 +105,14 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - Pull to refresh
+extension ViewController {
+    
+    func setupPullToRefresh() {
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh", attributes: [.foregroundColor: UIColor.white])
+        refreshControl.backgroundColor = .white
+        refreshControl.tintColor = .black
+        refreshControl.addTarget(self, action: #selector(loadCountryData), for: .valueChanged)
+        countryTable.addSubview(refreshControl)
+    }
+}
