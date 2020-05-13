@@ -31,8 +31,12 @@ extension CountryService {
             }
             do {
                 let jsonDecoder = JSONDecoder()
-                let countryData = try jsonDecoder.decode(Country.self, from: data)
+                guard let utf8Data = String(decoding: data, as: UTF8.self).data(using: .utf8) else {
+                    completion(nil,"Response data is not valid")
+                    return
+                }
                 
+                let countryData = try jsonDecoder.decode(Country.self, from: utf8Data)
                 guard (countryData.facts != nil) else {
                     completion(nil,"Facts data not found!")
                     return

@@ -12,17 +12,21 @@ import Foundation
 /// Define different endpoint cases for the Facts API to be used for network request
 enum CountryAPI {
     case factsDataList
+    case image(path: String)
 }
 
 extension CountryAPI: EndPointType {
     
     /// computed property for providing base url based on the network environment
     private var envBaseURL: String {
-        switch NetworkHandler.environment {
-        case .production:
-            return "https://dl.dropboxusercontent.com/"
+        switch self {
+        case .image(let path):
+            return path
         default:
-            return "https://dl.dropboxusercontent.com/"
+            switch NetworkHandler.environment {
+            case .production, .staging, .development:
+                return "https://dl.dropboxusercontent.com/"
+            }
         }
     }
     
@@ -37,6 +41,8 @@ extension CountryAPI: EndPointType {
         switch self {
         case .factsDataList:
             return "s/2iodh4vg0eortkl/facts.json"
+        case .image:
+            return ""
         }
     }
     

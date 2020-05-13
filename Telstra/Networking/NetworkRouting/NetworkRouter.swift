@@ -13,8 +13,11 @@ struct NetworkRouter<EndPoint: EndPointType> {
     /// Creates and returns a *URLResuestt* for the passed API end point in case of failure to create URL request throws *Error*
     /// - Parameter endPoint: must be a type confirming *EndPointType* protocol
     private func configureRequest(from endPoint: EndPoint) throws -> URLRequest {
-        let baseURL = endPoint.baseURL
-        var urlRequest = URLRequest(url: baseURL.appendingPathComponent(endPoint.path), cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 3.0)
+        var baseURL = endPoint.baseURL
+        if !endPoint.path.isEmpty {
+            baseURL = baseURL.appendingPathComponent(endPoint.path)
+        }
+        var urlRequest = URLRequest(url: baseURL, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 5.0)
         urlRequest.httpMethod = endPoint.httpMethod.rawValue
         do {
             switch endPoint.task {

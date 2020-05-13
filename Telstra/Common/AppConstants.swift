@@ -12,3 +12,7 @@ struct AppConstants {}
 enum NotificationNames {
     static let networkReachability = "networkReachability"
 }
+
+enum CellIdentifiers {
+    static let factCellIdentifier = "CountryFactCell"
+}
