@@ -39,6 +39,7 @@
 		8000223E246C2ACB009EFBB5 /* HTTPURLEncoderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000223D246C2ACB009EFBB5 /* HTTPURLEncoderTest.swift */; };
 		8000223F246C3154009EFBB5 /* countryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 80002235246C2763009EFBB5 /* countryData.json */; };
 		80002240246C3156009EFBB5 /* countryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 80002235246C2763009EFBB5 /* countryData.json */; };
+		80002242246C33D3009EFBB5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 80002241246C33D3009EFBB5 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		80002239246C2817009EFBB5 /* CountryViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryViewModelTest.swift; sourceTree = "<group>"; };
 		8000223B246C2957009EFBB5 /* CountryServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryServiceTest.swift; sourceTree = "<group>"; };
 		8000223D246C2ACB009EFBB5 /* HTTPURLEncoderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLEncoderTest.swift; sourceTree = "<group>"; };
+		80002241246C33D3009EFBB5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		800021C1246946F7009EFBB5 = {
 			isa = PBXGroup;
 			children = (
+				80002241246C33D3009EFBB5 /* README.md */,
 				800021CC246946F7009EFBB5 /* Telstra */,
 				800021E3246946FD009EFBB5 /* TelstraTests */,
 				800021EE246946FD009EFBB5 /* TelstraUITests */,
@@ -414,6 +417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80002242246C33D3009EFBB5 /* README.md in Resources */,
 				80002236246C2763009EFBB5 /* countryData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
