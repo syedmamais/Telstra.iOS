@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         return tableView
     }()
     
-    // init refresh control
+    /// init refresh control
     var refreshControl: UIRefreshControl = {
         return UIRefreshControl()
     }()
@@ -50,7 +50,6 @@ class ViewController: UIViewController {
     }
     
     func initViewModel() {
-        
         countryVM.dataFetched = { [weak self] in
             DispatchQueue.main.async { [weak self] in
                 self?.countryTable.reloadData()
@@ -59,7 +58,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
 }
 
 // MARK: - Country Data
@@ -68,6 +66,7 @@ extension ViewController {
     @objc func loadCountryData() {
         countryVM.fetchCountryData()
     }
+    
 }
 
 // MARK:- View Model Error binding
@@ -78,6 +77,7 @@ extension ViewController: AlertService {
             self?.showAlert(titleStr: "Error", messageStr: errorString, okButtonTitle: "OK", cancelButtonTitle: nil, response: nil)
         }
     }
+    
 }
 
 

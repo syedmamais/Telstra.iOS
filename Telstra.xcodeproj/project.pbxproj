@@ -32,6 +32,13 @@
 		8000222F246AEC5C009EFBB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000222E246AEC5C009EFBB5 /* SceneDelegate.swift */; };
 		80002231246AEFCC009EFBB5 /* FactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80002230246AEFCC009EFBB5 /* FactViewModel.swift */; };
 		80002233246AF11A009EFBB5 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80002232246AF11A009EFBB5 /* ImageService.swift */; };
+		80002236246C2763009EFBB5 /* countryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 80002235246C2763009EFBB5 /* countryData.json */; };
+		80002238246C278D009EFBB5 /* MockCountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80002237246C278D009EFBB5 /* MockCountryData.swift */; };
+		8000223A246C2817009EFBB5 /* CountryViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80002239246C2817009EFBB5 /* CountryViewModelTest.swift */; };
+		8000223C246C2957009EFBB5 /* CountryServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000223B246C2957009EFBB5 /* CountryServiceTest.swift */; };
+		8000223E246C2ACB009EFBB5 /* HTTPURLEncoderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000223D246C2ACB009EFBB5 /* HTTPURLEncoderTest.swift */; };
+		8000223F246C3154009EFBB5 /* countryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 80002235246C2763009EFBB5 /* countryData.json */; };
+		80002240246C3156009EFBB5 /* countryData.json in Resources */ = {isa = PBXBuildFile; fileRef = 80002235246C2763009EFBB5 /* countryData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +90,11 @@
 		8000222E246AEC5C009EFBB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		80002230246AEFCC009EFBB5 /* FactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewModel.swift; sourceTree = "<group>"; };
 		80002232246AF11A009EFBB5 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		80002235246C2763009EFBB5 /* countryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countryData.json; sourceTree = "<group>"; };
+		80002237246C278D009EFBB5 /* MockCountryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockCountryData.swift; sourceTree = "<group>"; };
+		80002239246C2817009EFBB5 /* CountryViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryViewModelTest.swift; sourceTree = "<group>"; };
+		8000223B246C2957009EFBB5 /* CountryServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryServiceTest.swift; sourceTree = "<group>"; };
+		8000223D246C2ACB009EFBB5 /* HTTPURLEncoderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPURLEncoderTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +162,11 @@
 		800021E3246946FD009EFBB5 /* TelstraTests */ = {
 			isa = PBXGroup;
 			children = (
+				80002235246C2763009EFBB5 /* countryData.json */,
+				80002237246C278D009EFBB5 /* MockCountryData.swift */,
+				80002239246C2817009EFBB5 /* CountryViewModelTest.swift */,
+				8000223B246C2957009EFBB5 /* CountryServiceTest.swift */,
+				8000223D246C2ACB009EFBB5 /* HTTPURLEncoderTest.swift */,
 				800021E4246946FD009EFBB5 /* TelstraTests.swift */,
 				800021E6246946FD009EFBB5 /* Info.plist */,
 			);
@@ -387,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8000223F246C3154009EFBB5 /* countryData.json in Resources */,
 				800021DA246946FC009EFBB5 /* LaunchScreen.storyboard in Resources */,
 				800021D7246946FC009EFBB5 /* Assets.xcassets in Resources */,
 			);
@@ -396,6 +414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80002236246C2763009EFBB5 /* countryData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +422,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80002240246C3156009EFBB5 /* countryData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +461,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8000223C246C2957009EFBB5 /* CountryServiceTest.swift in Sources */,
+				8000223A246C2817009EFBB5 /* CountryViewModelTest.swift in Sources */,
+				80002238246C278D009EFBB5 /* MockCountryData.swift in Sources */,
+				8000223E246C2ACB009EFBB5 /* HTTPURLEncoderTest.swift in Sources */,
 				800021E5246946FD009EFBB5 /* TelstraTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
